@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/etSalary"
         android:hint="Enter Salary"
+        android:inputType="numberDecimal"
         android:layout_marginTop="20dp"
         />
     <EditText
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/etAge"
         android:hint="Enter Age"
+        android:inputType="number"
         android:layout_marginTop="20dp"
 
         />
