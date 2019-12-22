@@ -31,7 +31,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
                 .inflate(R.layout.activity_layout_employee, parent, false);
         return new EmployeeViewHolder(view);
     }
-@SuppressLint("SetTexti18n")
+
     @Override
     public void onBindViewHolder(@NonNull EmployeeAdapter.EmployeeViewHolder holder, int position) {
         EmployeeRecycle employeeRecycle = employeeRecycleList.get(position);
