@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FrontMainActivity">
+    tools:context=".ShowEmployeeActivity">
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvOutput"/>
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"/>
+
 </ScrollView>
 
 </LinearLayout>
