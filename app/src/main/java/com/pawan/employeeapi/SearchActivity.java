@@ -28,7 +28,6 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-
         etEmployeeNo=findViewById(R.id.etEmployeeNo);
         btnSearch=findViewById(R.id.btnSearch);
         tvData=findViewById(R.id.tvData);
@@ -38,7 +37,6 @@ public class SearchActivity extends AppCompatActivity {
             public void onClick(View v) {
     loadData();
 }
-
         });
     }
 
