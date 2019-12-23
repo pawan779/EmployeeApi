@@ -11,17 +11,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.pawan.employeeapi.R;
+import com.pawan.employeeapi.model.Employee;
 
 import java.util.List;
 
 public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.EmployeeViewHolder> {
 
     Context context;
-    List<EmployeeRecycle> employeeRecycleList;
+    List<Employee> employeeViewList;
 
-    public EmployeeAdapter(Context context, List<EmployeeRecycle> employeeRecycleList) {
+    public EmployeeAdapter(Context context, List<Employee> employeeViewList) {
         this.context = context;
-        this.employeeRecycleList = employeeRecycleList;
+        this.employeeViewList = employeeViewList;
     }
 
     @NonNull
@@ -34,16 +35,16 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
 
     @Override
     public void onBindViewHolder(@NonNull EmployeeAdapter.EmployeeViewHolder holder, int position) {
-        EmployeeRecycle employeeRecycle = employeeRecycleList.get(position);
-        holder.tvId.setText(employeeRecycle.getEmployeeId());
-        holder.tvName.setText(employeeRecycle.getEmployeeName());
-        holder.tvSalary.setText(employeeRecycle.getEmployeeSalary());
-        holder.tvAge.setText(employeeRecycle.getEmployeeAge());
+        Employee employeeView = employeeViewList.get(position);
+        holder.tvId.setText(Integer.toString(employeeView.getId()));
+        holder.tvName.setText(employeeView.getEmployee_name());
+        holder.tvSalary.setText(employeeView.getEmployee_salary());
+        holder.tvAge.setText(Integer.toString(employeeView.getEmployee_age()));
     }
 
     @Override
     public int getItemCount() {
-        return employeeRecycleList.size();
+        return employeeViewList.size();
     }
 
     public class EmployeeViewHolder extends RecyclerView.ViewHolder {
