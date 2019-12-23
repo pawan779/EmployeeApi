@@ -58,6 +58,7 @@ public class ShowEmployeeActivity extends AppCompatActivity {
 
                 for (Employee emp: employeeList) {
 
+
                     employeeRecycleList.add(new EmployeeRecycle(emp.getId(),emp.getEmployee_name(),emp.getEmployee_salary(),emp.getEmployee_age()));
 
 

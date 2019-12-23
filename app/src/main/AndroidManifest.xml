@@ -14,11 +14,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".ShowEmployeeActivity"
             android:label="Show Employee">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".UpdateDeleteActivity"
@@ -31,7 +27,13 @@
             android:label="Register Employee" />
         <activity
             android:name=".MainActivity"
-            android:label="Employee API"></activity>
+            android:label="Employee API">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
