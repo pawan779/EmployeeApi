@@ -22,7 +22,7 @@ public interface EmployeeApi {
     Call<Employee>getEmployeeByID(@Path("empID") int empID);
 
     @POST("create")
-    Call<Void>registerEmploee(@Body EmployeeCUD emp);
+    Call<Void>registerEmployee(@Body EmployeeCUD emp);
 
     //Delete Employee on the basis of EmpID
     @DELETE("delete/{empID}")

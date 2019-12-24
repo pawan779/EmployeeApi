@@ -53,7 +53,7 @@ private Button btnRegister;
 
 
         EmployeeApi employeeApi=retrofit.create(EmployeeApi.class);
-        Call<Void> voidCall=employeeApi.registerEmploee(employeeCUD);
+        Call<Void> voidCall=employeeApi.registerEmployee(employeeCUD);
 
         voidCall.enqueue(new Callback<Void>() {
             @Override

@@ -42,7 +42,7 @@ public class UpdateDeleteActivity extends AppCompatActivity {
         btnSearchUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
                 loadData();
 
 
@@ -65,13 +65,19 @@ deleteEmployee();
     }
 
     private void deleteEmployee() {
-        CreateInstance();
+
+        EmployeeApi employeeApi=Url.createInstance().create(EmployeeApi.class);
         Call<Void> voidCall=employeeApi.deleteEmployee(Integer.parseInt(etEmployeeNo.getText().toString()));
 
         voidCall.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 Toast.makeText(UpdateDeleteActivity.this, "Sucessfully deleted", Toast.LENGTH_SHORT).show();
+                etEmployeeNo.setText("");
+                etUpdateName.setText("");
+                etUpdateAge.setText("");
+                etUpdateSalary.setText("");
+
             }
 
             @Override
@@ -107,7 +113,7 @@ deleteEmployee();
             etEmployeeNo.setError("Please enter employee id");
             return;
         }
-        CreateInstance();
+        employeeApi=Url.createInstance().create(EmployeeApi.class);
        Call<Employee> listCall=employeeApi.getEmployeeByID(Integer.parseInt(etEmployeeNo.getText().toString()));
 
        listCall.enqueue(new Callback<Employee>() {
@@ -125,11 +131,5 @@ deleteEmployee();
        });
     }
 
-    private void CreateInstance() {
-        retrofit=new Retrofit.Builder()
-                .baseUrl(Url.base_url)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        employeeApi=retrofit.create(EmployeeApi.class);
-    }
+
 }

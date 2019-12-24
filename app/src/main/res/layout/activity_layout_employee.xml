@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Employee Id"
+        android:textColor="#E40E0E"
         android:textSize="25sp"
        />
 
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Employee Name"
+        android:textColor="#2196F3"
         android:textSize="20sp" />
 
     <TextView
@@ -31,6 +33,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Employee Salary"
+        android:textColor="#2196F3"
         android:textSize="20sp"
        />
 
@@ -40,8 +43,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Employee Age"
+        android:textColor="#2196F3"
         android:textSize="20sp"
-
         />
 
 
